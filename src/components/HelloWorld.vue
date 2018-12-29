@@ -6,12 +6,16 @@
 </template>
 
 <script>
+const fullName = function() {
+  return `${this.firstName} ${this.lastName}`;
+};
+
 const title = function() {
-  return `Mr. ${this.firstName} ${this.lastName}`;
+  return `Mr. ${this.fullName}`;
 };
 
 const prof = function() {
-  return `Prof. ${this.firstName} ${this.lastName}`;
+  return `Prof. ${this.fullName}`;
 };
 
 export default {
@@ -21,6 +25,7 @@ export default {
     lastName: 'Xiao',
   }),
   computed: {
+    fullName,
     title,
     prof,
   },
